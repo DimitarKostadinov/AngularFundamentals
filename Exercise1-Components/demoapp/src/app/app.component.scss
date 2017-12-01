@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+}
+
+.left{
+    margin-top: 70px;
+    background: #19b4d6;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.right{
+    
+    background: rgb(171, 171, 196);
+}
+.top{
+    background: #f4f404;
+    display: block;
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.content{
+    display: inline-block;
+}
+button{
+    width: 115px;
+}

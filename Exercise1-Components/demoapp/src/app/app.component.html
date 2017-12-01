@@ -1,0 +1,11 @@
+<div class="col-md-12 top">Welcome to Article Site</div>
+<div class="container">
+    
+    <div class="content" *ngFor="let articles of data">
+        <div class="col-lg-11 left">
+            <note-headers (selection)="showDetails($event)"  [incomingArticle]="articles"></note-headers>
+            <note-article (deleteArticleEmmiter)="deleteTargetArticle($event)" [article]="selectedArticle"></note-article>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,11 @@
+<div>
+  <div>{{article?.title}}</div>
+  <img *ngIf="displayImage" src="{{article?.link}}" alt="img">
+  <button *ngIf ="!displayImage" (click)="showImage()">Show Image</button>
+  <button *ngIf ="displayImage" (click)="hideImage()">Hide Image</button>
+  <div>{{article?.author}}</div>
+  <div>{{trunc(article?.text)}}</div>
+  <button *ngIf="!hide" class="info" (click)="readMore()">Read More</button>
+  <button *ngIf="hide" class="info" (click)="hideText()">Hide Text</button>
+  <button (click)="deleteArticle(article.id)">Delete</button>
+</div>
