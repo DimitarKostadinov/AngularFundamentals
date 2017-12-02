@@ -1,5 +1,7 @@
-import { Component, OnInit,OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input,Output } from '@angular/core';
 import { FocusService } from '../../services/focus/focus.service';
+
+
 
 
 @Component({
@@ -8,19 +10,24 @@ import { FocusService } from '../../services/focus/focus.service';
   styleUrls: ['./focused.component.scss']
 })
 export class FocusedComponent implements OnInit {
-  
+  @Input() pokeImg
+  pokemonImage;
   pokemonOnFocus;
-  constructor(private focus:FocusService) {
-    this.focus.getPokemonsImage("001").subscribe(data=>{
-      this.pokemonOnFocus=data;
-    })
-   }
+  constructor(private focus: FocusService) {
+    this.focus.getPokemonsImage("001").subscribe(data => {
+      this.pokemonOnFocus = data;
+      this.pokemonImage=`http://localhost:5000/${this.pokeImg}`
+      console.log(this.pokeImg);
+   })
+  }
+  
+
 
 
   ngOnInit() {
+    
   }
 
- 
 
 
 }

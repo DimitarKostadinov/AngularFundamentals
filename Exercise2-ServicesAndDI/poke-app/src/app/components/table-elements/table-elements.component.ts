@@ -13,10 +13,14 @@ export class TableElementsComponent implements OnInit {
   ngOnInit() {
   }
   select(id){
-    console.log(id);
+    
     this.focus.getPokemonsImage(id).subscribe(data=>{
-      this.pokeData=data.img; //Тук връща Адреса на Стринга..
-      console.log(this.pokeData)
+      this.pokeData=data.img;  //Тук връща Адреса на Снимката
+  //МАХНИ Първоначално това .img за да тръгне проекта
+  // И след това го добави отново(не знам защо така става,
+  // но не иска да се билдне първия път)
+     
+      
   })
 
 }}
